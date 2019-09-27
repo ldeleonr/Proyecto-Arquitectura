@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- Iniciar Sesion -->
+  <div class="row" *ngIf="signin">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <app-signin></app-signin>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <!-- Registrarse -->
+  <div class="row" *ngIf="signup">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <app-signup></app-signup>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+

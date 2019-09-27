@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="formRegistro" (ngSubmit)="onSubmit()">
+      <!-- Nombres -->
+      <div class="form-group">
+        <input required class="form-control" type="text" placeholder="Nombres" formControlName="nombres">
+      </div>
+      <!-- Apellidos -->
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Apellidos" formControlName="apellidos">
+      </div>
+      <!-- Correo -->
+      <div class="form-group">
+        <input required class="form-control" type="email" placeholder="Correo" formControlName="correo">
+      </div>
+      <!-- Contraseña -->
+      <div class="form-group">
+        <input required class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+      </div>
+      <!-- Departamento -->
+      <div class="form-group">
+        <select required class="form-control" formControlName="departamento">
+          <option value="">Selecciona un departamento...</option>
+          <option *ngFor="let departamento of departamentos" [value]="departamento">{{ departamento }}</option>
+        </select>
+      </div>
+      <button type="submit">Registrar</button>
+    </form>
+  </div>

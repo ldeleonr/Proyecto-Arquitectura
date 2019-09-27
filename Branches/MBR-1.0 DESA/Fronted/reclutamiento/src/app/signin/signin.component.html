@@ -1,0 +1,13 @@
+<div class="container">
+  <form [formGroup]="formInicioSesion" (ngSubmit)="onSubmit()">
+    <!-- Correo -->
+    <div class="form-group">
+      <input required class="form-control" type="email" placeholder="Correo" formControlName="correo">
+    </div>
+    <!-- Contraseña -->
+    <div class="form-group">
+      <input required class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+    </div>
+    <button type="submit">Iniciar</button>
+  </form>
+</div>
