@@ -29,7 +29,6 @@ router.get('/departamentos/:id_depto', (req, res) => {
 // DELETE A departamentos
 router.delete('/departamentos/:id_depto', (req, res) => {
   const { id_depto } = req.params; 
-  console.log(id_depto);
   mysqlConnection.query('DELETE from departamentos WHERE id_depto = ?',[id_depto], (err, rows, fields) => {
     if (!err) {
       res.json('Departamento eliminado');
@@ -41,8 +40,7 @@ router.delete('/departamentos/:id_depto', (req, res) => {
 
 
 // INSERT A departamentos
-router.post('/departamentos',   (req=Request, res=Response) => {
-  console.log(req.body);
+router.post('/departamentos',   (req, res) => {
   mysqlConnection.query('INSERT INTO departamentos SET ?', [req.body], (err, rows, fields) => {
     if(!err) {
       res.json({status: 'departamento insertado'});
@@ -54,7 +52,7 @@ router.post('/departamentos',   (req=Request, res=Response) => {
 
 });
 
-
+//UPDATE A departamentos
 router.put('/departamentos',(req, res) =>{
   console.log(req.body);
   console.log(req.params);
