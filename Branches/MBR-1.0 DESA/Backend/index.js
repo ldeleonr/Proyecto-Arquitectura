@@ -15,6 +15,7 @@ app.use(express.urlencoded({
 // Routes
 app.use(require('./routes/departamentos.js'));
 app.use(require('./routes/puestos.js'));
+app.use(require('./routes/empleados.js'));
 // Starting the server
 app.listen(app.get('port'), () => {
   console.log(`Server on port ${app.get('port')}`);
