@@ -1,3 +1,85 @@
-<p>
-  solicitud works!
-</p>
+<div class="container-contact100">
+  <div class="wrap-contact100">
+    <form [formGroup]="formSolicitud" class="contact100-form validate-form" (ngSubmit)="enviar()">
+      <span class="contact100-form-title">
+        SOLICITUD DE EMPLEO
+      </span>
+
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+        <span class="label-input100">Dinos tu primer nombre *</span>
+        <input class="input100" type="text" name="nombre1" 
+              placeholder="Ingresa tu primer nombre"
+              formControlName="nombre1">
+      </div>
+        
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+        <span class="label-input100">Dinos tu segundo nombre *</span>
+        <input class="input100" type="text" name="nombre2" 
+              placeholder="Ingresa tu segundo nombre"
+              formControlName="nombre2">
+      </div>
+      
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+        <span class="label-input100">Dinos tu primer apellido *</span>
+        <input class="input100" type="text" name="apellido1" 
+              placeholder="Ingresa tu primer apellido"
+              formControlName="apellido1">
+      </div>
+        
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+        <span class="label-input100">Dinos tu segundo apellido *</span>
+        <input class="input100" type="text" name="apellido2" 
+              placeholder="Ingresa tu segundo apellido"
+              formControlName="apellido2">
+      </div>
+
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <span class="label-input100">Ingresa tu telefono *</span>
+        <input class="input100" type="text" name="telefono" 
+              placeholder="Por favor ingresa tu teléfono"
+              formControlName="telefono">
+      </div>
+      
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <span class="label-input100">Ingresa tu correo *</span>
+        <input class="input100" type="text" name="email" 
+              placeholder="Ingresa tu correo electronico"
+              formControlName="email">
+      </div>
+      
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <span class="label-input100">Ingresa tu DPI *</span>
+        <input class="input100" type="text" name="dpi" 
+              placeholder="Por favor ingresa tu DPI"
+              formControlName="dpi">
+      </div>
+      
+      <div class="wrap-input100">
+        <span class="label-input100">CV</span>
+        <input class="input100" type="file" name="cv" 
+                placeholder="cv"
+                formControlName="cv">
+      </div>
+
+      <div class="wrap-input100 validate-input" data-validate = "Message is required">
+        <span class="label-input100">Acerca de tí</span>
+        <textarea class="input100" name="message" 
+                  placeholder="Como te describes..."
+                  formControlName="message"></textarea>
+      </div>
+
+      <div class="container-contact100-form-btn">
+        <div class="wrap-contact100-form-btn">
+          <div class="contact100-form-bgbtn"></div>
+          <button type="submit" class="contact100-form-btn">
+            Enviar mi info.
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <span class="contact100-more">
+      Grupo de frontend ingenieria en sistemas UMG by C. Matías
+  </span>
+</div>

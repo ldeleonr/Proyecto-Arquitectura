@@ -17,10 +17,10 @@ export class SignupComponent implements OnInit {
 
     this.formRegistro = new FormGroup({
       nombres: new FormControl('', Validators.required),
-      apellidos: new FormControl('', Validators.required),
-      correo: new FormControl('', Validators.required),
+      correo: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required),
-      departamento: new FormControl('', Validators.required)
+      cui: new FormControl('', Validators.required),
+      telefono: new FormControl('', Validators.required)
     });
 
   }
@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formRegistro);
+    console.log(this.formRegistro.value);
   }
 
 }

@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reclutamiento';
-  signin = true;
-  signup = false;
+  signin = false;
+  signup = true;
 }

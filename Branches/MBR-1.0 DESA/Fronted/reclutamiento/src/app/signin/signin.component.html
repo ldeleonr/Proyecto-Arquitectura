@@ -1,13 +1,21 @@
-<div class="container">
+<div class="container caja">
   <form [formGroup]="formInicioSesion" (ngSubmit)="onSubmit()">
-    <!-- Correo -->
-    <div class="form-group">
-      <input required class="form-control" type="email" placeholder="Correo" formControlName="correo">
+    <div class="container">
+      <h3 class="titulo-principal">INICIAR SESIÓN</h3>
+      <div class="input-group input-group-icon">
+        <input formControlName="correo" type="email" placeholder="Correo electrónico"/>
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input formControlName="password" type="password" placeholder="Contraseña"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
     </div>
-    <!-- Contraseña -->
-    <div class="form-group">
-      <input required class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+    <div class="container">
+      <input class="boton" type="submit" value="Iniciar sesión"> 
     </div>
-    <button type="submit">Iniciar</button>
+    <div class="container">
+      <a href="#" class="link" routerLink="/registrar">Registrarse</a>
+    </div>
   </form>
 </div>

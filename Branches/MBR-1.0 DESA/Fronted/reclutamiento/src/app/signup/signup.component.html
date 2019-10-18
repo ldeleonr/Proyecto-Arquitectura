@@ -1,28 +1,48 @@
-<div class="container">
+<div class="container caja">
     <form [formGroup]="formRegistro" (ngSubmit)="onSubmit()">
-      <!-- Nombres -->
-      <div class="form-group">
-        <input required class="form-control" type="text" placeholder="Nombres" formControlName="nombres">
+      <h3 class="titulo-principal">REGISTRAR</h3>
+      <div class="container">
+        <h5>Datos</h5>
+        <div class="input-group input-group-icon">
+          <input formControlName="nombres" type="text" placeholder="Nombre completo"/>
+          <div class="input-icon"><i class="fa fa-user"></i></div>
+        </div>
+        <div class="input-group input-group-icon">
+          <input formControlName="correo" type="email" placeholder="Correo electrónico"/>
+          <div class="input-icon"><i class="fa fa-envelope"></i></div>
+        </div>
+        <div class="input-group input-group-icon">
+          <input formControlName="password" type="password" placeholder="Contraseña"/>
+          <div class="input-icon"><i class="fa fa-key"></i></div>
+        </div>
       </div>
-      <!-- Apellidos -->
-      <div class="form-group">
-        <input class="form-control" type="text" placeholder="Apellidos" formControlName="apellidos">
+      <div class="container">
+      <div class="col-half">
+      
+        </div>
       </div>
-      <!-- Correo -->
-      <div class="form-group">
-        <input required class="form-control" type="email" placeholder="Correo" formControlName="correo">
+      
+      <div class="container">
+        <div class="col-half">
+          <h5>DPI</h5>
+          <div class="input-group input-group-icon">
+            <input formControlName="cui" type="text" placeholder="CUI"/>
+            <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+          </div>
+        </div>
+        <div class="col-half">
+          <h5>Verificación (obligatorio)</h5>
+          <div class="input-group input-group-icon">
+            <input formControlName="telefono" type="text" placeholder="Teléfono móvil"/>
+            <div class="input-icon"><i class="fa fa-phone"></i></div>
+          </div>
+        </div>
       </div>
-      <!-- Contraseña -->
-      <div class="form-group">
-        <input required class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+      <div class="container">
+        <input class="boton" type="submit" value="Registrar"> 
       </div>
-      <!-- Departamento -->
-      <div class="form-group">
-        <select required class="form-control" formControlName="departamento">
-          <option value="">Selecciona un departamento...</option>
-          <option *ngFor="let departamento of departamentos" [value]="departamento">{{ departamento }}</option>
-        </select>
+      <div class="container">
+        <a href="#" class="link" routerLink="/iniciar-sesion">Iniciar Sesión</a>
       </div>
-      <button type="submit">Registrar</button>
     </form>
   </div>
