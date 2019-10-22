@@ -13,7 +13,7 @@
       </div>
         
       <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
-        <span class="label-input100">Dinos tu segundo nombre *</span>
+        <span class="label-input100">Dinos tu segundo nombre</span>
         <input class="input100" type="text" name="nombre2" 
               placeholder="Ingresa tu segundo nombre"
               formControlName="nombre2">
@@ -27,7 +27,7 @@
       </div>
         
       <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
-        <span class="label-input100">Dinos tu segundo apellido *</span>
+        <span class="label-input100">Dinos tu segundo apellido</span>
         <input class="input100" type="text" name="apellido2" 
               placeholder="Ingresa tu segundo apellido"
               formControlName="apellido2">
@@ -48,17 +48,27 @@
       </div>
       
       <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-        <span class="label-input100">Ingresa tu DPI *</span>
+        <span class="label-input100">Ingresa tu DPI</span>
         <input class="input100" type="text" name="dpi" 
               placeholder="Por favor ingresa tu DPI"
               formControlName="dpi">
       </div>
+
+      <!-- <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <span class="label-input100">Área a aplicar *</span>
+        <select class="input100" name="area" formControlName="area">
+          <option value="">Selecciona una área...</option>
+          <option *ngFor="let area of areas" [value]="area">{{ area }} </option>
+        </select>
+      </div> -->
       
       <div class="wrap-input100">
-        <span class="label-input100">CV</span>
+        <span class="label-input100">CV *</span>
         <input class="input100" type="file" name="cv" 
                 placeholder="cv"
-                formControlName="cv">
+                formControlName="curriculumvitae"
+                (change)="handleFileInput($event.target.files)">
+        <span *ngIf="statusFile">Cargando...</span>
       </div>
 
       <div class="wrap-input100 validate-input" data-validate = "Message is required">
@@ -71,7 +81,7 @@
       <div class="container-contact100-form-btn">
         <div class="wrap-contact100-form-btn">
           <div class="contact100-form-bgbtn"></div>
-          <button type="submit" class="contact100-form-btn">
+          <button [disabled]="!formSolicitud.valid" type="submit" class="contact100-form-btn">
             Enviar mi info.
           </button>
         </div>
